@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframword.org/schema/beans/spring-beans.xsd">
+
+    <bean id="mathHelper" class="unittest.MathHelper"/>
+    <bean id="mathService" class="unittest.MathService">
+        <constructor-arg name="mathHelper" ref="mathHelper"/>
+    </bean>
+</beans>
